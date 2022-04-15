@@ -1,0 +1,160 @@
+body {
+    background: url(library.jpg);
+    background-size: cover;
+    font-family: Arial;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 64px;
+}
+
+.buttons {
+    position: relative;
+    float: right;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button-hover {
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    margin: 6px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+}
+
+.button-hover:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.button-hover:focus {
+    outline: none;
+}
+
+.button-hover.col-3 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.button-hover.col-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.button-hover.col-2 {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+.heading {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.547);
+    border-radius: 50px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+    border-radius: 15px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: rgba(221, 221, 221, 0.775);
+    outline: none;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+    float: left;
+    width: 50%;
+}
+
+.signupbtn {
+    padding: 14px 20px;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    float: left;
+    width: 50%;
+}
+
+.container {
+    padding: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    overflow: auto;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: url(library.jpg);
+    background-size: cover;
+}
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefecd;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: 90%;
+    border-radius: 25px;
+}
+  
+  /* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+   
+  /* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+  
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+  
+  /* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.clearfix {
+    margin: auto;
+    width: 40%;
+}
