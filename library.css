@@ -65,7 +65,7 @@ h1 {
     margin: auto;
     width: 60%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.547);
+    background-color: rgba(0, 0, 0, 0.732);
     border-radius: 50px;
 }
 
@@ -103,11 +103,9 @@ input[type=text]:focus, input[type=password]:focus {
     padding: 8px;
 }
 
-.modal {
+.modal1 {
     display: none;
     position: fixed;
-    overflow: auto;
-    z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -117,11 +115,31 @@ input[type=text]:focus, input[type=password]:focus {
 }
   
   /* Modal Content/Box */
-.modal-content {
+.modal1-content {
     background-color: #fefefecd;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    width: 50%; /* Could be more or less, depending on screen size */
-    height: 90%;
+    width: 500px; /* Could be more or less, depending on screen size */
+    height: 70%;
+    border-radius: 25px;
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: url(library.jpg);
+    background-size: cover;
+}
+  
+  /* Modal Content/Box */
+.modal2-content {
+    background-color: #fefefecd;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 500px; /* Could be more or less, depending on screen size */
+    height: 50%;
     border-radius: 25px;
 }
   
@@ -156,5 +174,55 @@ hr {
   
 .clearfix {
     margin: auto;
-    width: 40%;
+    width: 60%;
+}
+
+.options {
+    position: relative;
+    float: center;
+}
+
+.button2-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    margin: 6px;
+    height: 80px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    transition: all .4s ease-in-out;
+}
+
+.button2-hover:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.button2-hover:focus {
+    outline: none;
+}
+
+.button2-hover.col-3 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+.button2-hover.col-5 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.button2-hover.col-4 {
+    background-image: linear-gradient(to right, #dcd240, #ecb369, #f9a600 , #e8fb3b);
+    box-shadow: 0 4px 15px 0 rgba(236, 192, 116, 0.75);
+}
+
+.button2-hover.col-6 {
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+    box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
 }
