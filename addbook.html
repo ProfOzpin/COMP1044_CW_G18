@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="library.css">
+    <script>
+        function Home()
+        {
+            location.href = "homepageadmin.html";
+        }
+    </script>
+</head>
+<body>
+    
+    <div id="modal3">
+        <form class="modal3-content">
+          <div class="container">
+            <center> <h2 style="color: white;">Add Book</h2> </center>
+
+            <label for="title"></label>
+            <input type="text" placeholder="Book Title" name="title" required>
+            <br>
+
+            <label for="author"></label>
+            <input type="text" placeholder="Author" name="author" required>
+            <br>
+
+            <label for="bookpub"></label>
+            <input type="text" placeholder="Book Publisher" name="bookpub" required>
+            <br>
+
+            <label for="publisher"></label>
+            <input type="text" placeholder="Publisher Name" name="publisher" required>
+            <br>
+
+            <label for="ISBN"></label>
+            <input type="text" placeholder="ISBN" name="ISBN" required>
+            <br>
+
+            <label for="copyright_year"></label>
+            <input type="text" placeholder="Copyright Year" name="copyright_year" required>
+            <br>
+
+            <label for="status" style="font-size: 14px; color: white;">Status</label>
+            <select name="Status" id="Status" style="border-radius: 8px;">  
+                <option value="new">New</option>
+                <option value="archive">Archive</option>
+                <option value="damaged">Damaged</option>
+                <option value="lost">Lost</option>
+                <option value="old">Old</option>
+            </select>
+
+            <br>
+
+            <center>
+                <div class="clearfix">
+                    <button type="submit" class="button-hover col-1">Search</button>
+                    <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                </div>
+            </center>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

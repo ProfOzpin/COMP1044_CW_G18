@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="library.css">
+    <script>
+        function Home()
+        {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const type_val = urlParams.get('type');
+            if(type_val == "user")
+            location.href = "homepageuser.html";
+            else 
+            location.href = "homepageadmin.html";
+        }
+    </script>
+</head>
+<body>
+    <br> <br> <br> <br> <br>
+    <div id="modal3">
+        <form class="modal3-content">
+          <div class="container">
+            <center> <h2 style="color: white;">Search Book</h2> </center>
+
+            <label for="title"></label>
+            <input type="text" placeholder="Title" name="title">
+            <br>
+
+            <label for="author"></label>
+            <input type="text" placeholder="Author" name="author">
+            <br>
+
+            <label for="ISBN"></label>
+            <input type="text" placeholder="ISBN" name="ISBN">
+            <br>
+
+            <label for="publisher"></label>
+            <input type="text" placeholder="Publisher" name="publisher">
+            <br>
+
+            <center>
+                <div class="clearfix">
+                    <button type="submit" class="button-hover col-1">Search</button>
+                    <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                </div>
+            </center>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

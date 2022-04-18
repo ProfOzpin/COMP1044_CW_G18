@@ -2,6 +2,17 @@
 <html>
 <head>
     <link rel="stylesheet" href="library.css">
+    <script>
+        function SearchBook()
+        {
+            location.href="searchbook.html?type=user";
+        }
+
+        function SearchMember()
+        {
+            location.href="searchmember.html?type=user";
+        }
+    </script>
 </head>
 <body>
     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
@@ -12,8 +23,8 @@
     <center>
         <div class="options">
             
-            <button class="button2-hover col-4" onclick="Login()"> Search Book </button>
-            <button class="button2-hover col-4" onclick="Login()"> Search Member </button>
+            <button class="button2-hover col-4" onclick="SearchBook()"> Search Book </button>
+            <button class="button2-hover col-4" onclick="SearchMember()"> Search Member </button>
         
         </div>
     </center>

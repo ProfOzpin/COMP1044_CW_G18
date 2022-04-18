@@ -226,3 +226,23 @@ hr {
     background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
     box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
 }
+
+.modal3 {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: url(library.jpg);
+    background-size: cover;
+}
+  
+  /* Modal Content/Box */
+.modal3-content {
+    background-color: rgba(0, 0, 0, 0.636);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 500px; /* Could be more or less, depending on screen size */
+    height: 50%;
+    border-radius: 25px;
+}
