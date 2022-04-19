@@ -5,16 +5,17 @@
     <script>
         function Home()
         {
-            location.href="homepageuser.html";
+            location.href="homepageadmin.html";
         }
     </script>
 </head>
 <body>
-    <br> <br> <br> <br> <br>
+    <br>
     <div id="modal3">
         <form class="modal3-content">
           <div class="container">
-            <center> <h2 style="color: white;">Delete Book</h2> </center>
+            <center> <h2 style="color: white;">Delete Book</h2>
+            <h4 style="color: red;">Warning: Deleting a book(s) will permanently erase it(them) from the database!</h4> </center>
 
             <label for="title"></label>
             <input type="text" placeholder="Title" name="title">
@@ -32,10 +33,28 @@
             <input type="text" placeholder="Publisher" name="publisher">
             <br>
 
+            <label for="date_added" style="font-size: 14px; color: white;">Date Added</label>
+            <input type="date" placeholder="Date Added" name="date_added">
+            <br> <br>
+
+            <label for="copyright_year" style="font-size: 14px; color: white;"></label>
+            <input type="text" placeholder="Copyright Year" name="copyright_year">
+            <br>
+
+            <label for="status" style="font-size: 14px; color: white;">Status</label>
+            <select name="Status" id="Status" style="border-radius: 8px;">  
+                <option value=" "> </option> 
+                <option value="new">New</option>
+                <option value="archive">Archive</option>
+                <option value="damaged">Damaged</option>
+                <option value="lost">Lost</option>
+                <option value="old">Old</option>
+            </select>
+
             <center>
                 <div class="clearfix">
-                    <button type="submit" class="button-hover col-1">Search</button>
-                    <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    <button type="submit" class="button-hover col-2">Delete</button>
+                    <button type="button" onclick="Home()" class="button-hover col-1">Cancel</button>
                 </div>
             </center>
           </div>

@@ -22,13 +22,32 @@
         {
             location.href="addmember.html";
         }
+
+        function DeleteBook()
+        {
+            location.href="deletebook.html";
+        }
+
+        function DeleteMember()
+        {
+            location.href="deletemember.html";
+        }
+
+        function Index()
+        {
+            location.href="index.html";
+        }
     </script>
 </head>
 <body>
-    <br> <br> <br> <br> 
+    <br>
+    <div class="buttons">
+        <button class="button-hover col-3" onclick="Index()">Log Out</button>
+    </div> 
+    <br> <br> <br>
     <div class="heading"> <center> <h1> LIBRARY DATABASE </h1></center> </div>
-    <br>
-    <br>
+    
+    <center><h4 style="color: rgb(79, 79, 217);"">Welcome back John Smith!</h4></center>
     <br>
     <center>
         <div class="options">
@@ -41,8 +60,8 @@
             <button class="button2-hover col-5" onclick="Login()"> Update Book </button>
             <button class="button2-hover col-5" onclick="Login()"> Update Member </button>
             <br>
-            <button class="button2-hover col-6" onclick="Login()"> Delete Book </button>
-            <button class="button2-hover col-6" onclick="Login()"> Delete Member </button>
+            <button class="button2-hover col-6" onclick="DeleteBook()"> Delete Book </button>
+            <button class="button2-hover col-6" onclick="DeleteMember()"> Delete Member </button>
         </div>
     </center>
 </body>

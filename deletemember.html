@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="library.css">
-    <script>
-        function Home()
-        {
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const type_val = urlParams.get('type');
-            if(type_val == "user")
-            location.href = "homepageuser.html";
-            else 
-            location.href = "homepageadmin.html";
-        }
-    </script>
+  <link rel="stylesheet" href="library.css">
+  <script>
+      function Home()
+      {
+          location.href="homepageadmin.html";
+      }
+  </script>
 </head>
 <body>
     <br> <br> <br> <br> <br>
     <div id="modal3">
         <form class="modal3-content">
           <div class="container">
-            <center> <h2 style="color: white;">Search Member</h2> 
-            <h4 style="color: gold;">Leave the fields blank to search for all books in the database or fill the required ones to add search parameters</h4> </center>
+            <center> <h2 style="color: white;">Delete Member</h2> 
+              <h4 style="color: red;">Warning: Deleting a member(s) will permanently erase them from the database!</h4> </center>
 
             <label for="firstName"></label>
             <input type="text" placeholder="First Name" name="firstName">
@@ -32,8 +26,8 @@
             <br>
 
             <label for="gender" style="font-size: 14px; color: white;">Gender</label>
-            <select name="Gender" id="Gender" style="border-radius: 8px;">  
-                <option value=" "> </option>
+            <select name="Gender" id="Gender" style="border-radius: 8px;"> 
+                <option value=" "> </option>  
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>

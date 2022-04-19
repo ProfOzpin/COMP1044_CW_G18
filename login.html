@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="library.css">
     <script>
-        function Home()
-        {
-            location.href = "library.html";
+        function Home() {
+            location.href = "index.html";
         }
 
-        function SignUp()
-        {
-            location.href = "signup.html";
+        function SignUp() {
+            location.href = "signup.php";
+        }
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        if (urlParams.get("username") == "admin" && urlParams.get("psw") == "admin") {
+            location.href = "homepageadmin.html";
         }
     </script>
 </head>
+
 <body>
     <br> <br> <br> <br>
     <div id="modal2">
-        <form class="modal2-content">
-          <div class="container">
-            <center> <h2 style="color: black;">Login</h2> </center>
-            <hr>
+        <form id="xyz" class="modal2-content">
+            <div class="container">
+                <center>
+                    <h2 style="color: black;">Login</h2>
+                </center>
+                <hr>
 
-            <label for="username"></label>
-            <input type="text" placeholder="Username" name="username" required>
-            <br>
+                <label for="username"></label>
+                <input type="text" placeholder="Username" name="username" required>
+                <br>
 
-            <label for="psw"></label>
-            <input type="password" placeholder="Password" name="psw" required>
-      
-            <br> 
-            <center><span style="font-size: 14px;">Not registered? <button onclick="SignUp()">Sign Up</button></span></center>
-            <br> <br>
-            <center>
-                <div class="clearfix">
-                    <button type="submit" class="button-hover col-1">Login</button>
-                    <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
-                </div>
-            </center>
-          </div>
+                <label for="psw"></label>
+                <input type="password" placeholder="Password" name="psw" required>
+
+                <br>
+                <center><span style="font-size: 14px;">Not registered? <button onclick="SignUp()">Sign
+                            Up</button></span></center>
+                <br> <br>
+                <center>
+                    <div class="clearfix">
+                        <button type="submit" onclick="" class="button-hover col-1">Login</button>
+                        <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    </div>
+                </center>
+            </div>
         </form>
-      </div>
+    </div>
+
 </body>
+
 </html>

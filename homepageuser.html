@@ -8,23 +8,32 @@
             location.href="searchbook.html?type=user";
         }
 
-        function SearchMember()
+        function ReturnBook()
         {
-            location.href="searchmember.html?type=user";
+            location.href="returnbook.html?type=user";
+        }
+
+        function Index()
+        {
+            location.href="index.html";
         }
     </script>
 </head>
 <body>
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <br> <div class="buttons">
+        <button class="button-hover col-3" onclick="Index()">Log Out</button>
+    </div> 
+    <br> <br> <br> <br> <br> <br> <br> <br>
     <div class="heading"> <center> <h1> LIBRARY DATABASE </h1></center> </div>
+    <center><h4 style="color: rgb(79, 79, 217);">Welcome back (name)!</h4></center>
     <br>
-    <br>
-    <br>
+    
     <center>
         <div class="options">
             
             <button class="button2-hover col-4" onclick="SearchBook()"> Search Book </button>
-            <button class="button2-hover col-4" onclick="SearchMember()"> Search Member </button>
+            <br>
+            <button class="button2-hover col-5" onclick="ReturnBook()"> Return Book </button>
         
         </div>
     </center>
