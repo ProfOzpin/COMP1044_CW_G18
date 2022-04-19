@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="library.css">
+    <script>
+        function Home()
+        {
+            location.href="homepageuser.html";
+        }
+    </script>
+</head>
+<body>
+    <br> <br> <br> <br> <br>
+    <div id="modal3">
+        <form class="modal3-content">
+          <div class="container">
+            <center> <h2 style="color: white;">Update Borrow Details</h2> </center>
+			<!-- I will be making the form so that it updates the borrow status, book id and the return date,
+			lmk if need it to update borrow date as well (it is in a different table - borrow) -->
+			
+			<!-- I'm doing it so that can select the borrow details it wants to update by the borrow details id
+			from a drop down menu connected to the DB -->
+			
+            <label for="Borrow Details ID"></label>
+            <select name="Borrow Details ID"></select>
+            <br>
+
+            <label for="Book ID"></label>
+            <input type="text" placeholder="Book ID" name="Book ID">
+            <br>
+
+            <label for="Borrow Status"></label>
+            <select name="Borrow Status">
+				<option value="pending">Pending</option>
+				<option value="borrowed">Borrowed</option>
+				<option value="returned">Returned</option>
+			</select>
+            <br>
+
+            <label for="Return Date"></label>
+            <input type="text" placeholder="Return Date" name="Return Date">
+            <br>
+
+            <center>
+                <div class="clearfix">
+                    <button type="submit" class="button-hover col-1">Search</button>
+                    <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                </div>
+            </center>
+          </div>
+        </form>
+      </div>
+</body>
+</html>
