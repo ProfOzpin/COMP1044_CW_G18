@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="library.css">
     <script>
-        function SearchBook()
-        {
-            location.href="searchbook.html?type=admin";
+        function SearchBook() {
+            location.href = "searchbook.html?type=admin";
         }
 
-        function SearchMember()
-        {
-            location.href="searchmember.html?type=admin";
+        function SearchMember() {
+            location.href = "searchmember.html?type=admin";
         }
 
-        function AddBook()
-        {
-            location.href="addbook.html";
+        function AddBook() {
+            location.href = "addbook.html";
         }
 
-        function AddMember()
-        {
-            location.href="addmember.html";
+        function AddMember() {
+            location.href = "addmember.html";
         }
 
-        function DeleteBook()
-        {
-            location.href="deletebook.html";
+        function UpdateBorrows() {
+            location.href = "updatebook.html?type=admin";
         }
 
-        function DeleteMember()
-        {
-            location.href="deletemember.html";
+        function DeleteBook() {
+            location.href = "deletebook.html";
         }
 
-        function Index()
-        {
-            location.href="index.html";
+        function DeleteMember() {
+            location.href = "deletemember.html";
+        }
+
+        function Index() {
+            location.href = "index.html";
         }
     </script>
 </head>
+
 <body>
     <br>
     <div class="buttons">
         <button class="button-hover col-3" onclick="Index()">Log Out</button>
-    </div> 
+    </div>
     <br> <br> <br>
-    <div class="heading"> <center> <h1> LIBRARY DATABASE </h1></center> </div>
-    
-    <center><h4 style="color: rgb(79, 79, 217);"">Welcome back John Smith!</h4></center>
+    <div class="heading">
+        <center>
+            <h1> LIBRARY DATABASE </h1>
+        </center>
+    </div>
+
+    <center>
+        <h4 style="color: rgb(79, 79, 217);"">Welcome back John Smith!</h4></center>
     <br>
     <center>
-        <div class="options">
+        <div class=" options">
             <button class="button2-hover col-3" onclick="AddBook()"> Add Book </button>
             <button class="button2-hover col-3" onclick="AddMember()"> Add Member </button>
             <br>
             <button class="button2-hover col-4" onclick="SearchBook()"> Search Book </button>
             <button class="button2-hover col-4" onclick="SearchMember()"> Search Member </button>
             <br>
-            <button class="button2-hover col-5" onclick="Login()"> Update Book </button>
-            <button class="button2-hover col-5" onclick="Login()"> Update Member </button>
+            <button class="button2-hover col-5" onclick="UpdateBorrows()"> Update Borrows </button>
+            <button class="button2-hover col-5" onclick="UpdateMember()"> Update Member </button>
             <br>
             <button class="button2-hover col-6" onclick="DeleteBook()"> Delete Book </button>
             <button class="button2-hover col-6" onclick="DeleteMember()"> Delete Member </button>
-        </div>
+            </div>
     </center>
 </body>
+
 </html>

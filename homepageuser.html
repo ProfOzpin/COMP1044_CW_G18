@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="library.css">
     <script>
-        function SearchBook()
-        {
-            location.href="searchbook.html?type=user";
+        function SearchBook() {
+            location.href = "searchbook.html?type=user";
         }
 
-        function ReturnBook()
-        {
-            location.href="returnbook.html?type=user";
+        function ReturnBook() {
+            location.href = "updatebook.html?type=user";
         }
 
-        function Index()
-        {
-            location.href="index.html";
+        function Index() {
+            location.href = "index.html";
         }
     </script>
 </head>
+
 <body>
-    <br> <div class="buttons">
-        <button class="button-hover col-3" onclick="Index()">Log Out</button>
-    </div> 
-    <br> <br> <br> <br> <br> <br> <br> <br>
-    <div class="heading"> <center> <h1> LIBRARY DATABASE </h1></center> </div>
-    <center><h4 style="color: rgb(79, 79, 217);">Welcome back (name)!</h4></center>
     <br>
-    
+    <div class="buttons">
+        <button class="button-hover col-3" onclick="Index()">Log Out</button>
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br>
+    <div class="heading">
+        <center>
+            <h1> LIBRARY DATABASE </h1>
+        </center>
+    </div>
+    <center>
+        <h4 style="color: rgb(79, 79, 217);">Welcome back (name)!</h4>
+    </center>
+    <br>
+
     <center>
         <div class="options">
-            
+
             <button class="button2-hover col-4" onclick="SearchBook()"> Search Book </button>
             <br>
             <button class="button2-hover col-5" onclick="ReturnBook()"> Return Book </button>
-        
+
         </div>
     </center>
 </body>
+
 </html>

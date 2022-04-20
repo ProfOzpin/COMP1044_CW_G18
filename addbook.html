@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="library.css">
     <script>
-        function Home()
-        {
+        function Home() {
             location.href = "homepageadmin.html";
         }
     </script>
 </head>
+
 <body>
-    
+
     <div id="modal3">
-        <form class="modal3-content">
-          <div class="container">
-            <center> <h2 style="color: white;">Add Book</h2> </center>
+        <form class="modal3-content" action="AddBook.php" method="get">
+            <div class="container">
+                <center>
+                    <h2 style="color: white;">Add Book</h2>
+                </center>
 
-            <label for="title"></label>
-            <input type="text" placeholder="Book Title" name="title" required>
-            <br>
+                <label for="title"></label>
+                <input type="text" placeholder="Book Title" name="book_title" required>
+                <br>
 
-            <label for="author"></label>
-            <input type="text" placeholder="Author" name="author" required>
-            <br>
+                <label for="author"></label>
+                <input type="text" placeholder="Author" name="author" required>
+                <br>
 
-            <label for="bookpub"></label>
-            <input type="text" placeholder="Book Publisher" name="bookpub" required>
-            <br>
+                <label for="Number of Copies"></label>
+                <input type="text" placeholder="Number of Copies" name="book_copies" required>
+                <br>
 
-            <label for="publisher"></label>
-            <input type="text" placeholder="Publisher Name" name="publisher" required>
-            <br>
+                <label for="bookpub"></label>
+                <input type="text" placeholder="Book Publisher" name="book_pub" required>
+                <br>
 
-            <label for="ISBN"></label>
-            <input type="text" placeholder="ISBN" name="ISBN" required>
-            <br>
+                <label for="publisher"></label>
+                <input type="text" placeholder="Publisher Name" name="publisher_name" required>
+                <br>
 
-            <label for="copyright_year"></label>
-            <input type="text" placeholder="Copyright Year" name="copyright_year" required>
-            <br>
+                <label for="ISBN"></label>
+                <input type="text" placeholder="ISBN" name="isbn" required>
+                <br>
 
-            <label for="category" style="font-size: 14px; color: white;">Category</label>
-            <select name="Category" id="category" style="border-radius: 8px;">  
-                <option value="periodical">Periodical</option>
-                <option value="english">English</option>
-                <option value="math">Math</option>
-                <option value="science">Science</option>
-                <option value="encyclopedia">Encyclopedia</option>
-                <option value="filipiniana">Filipiniana</option>
-                <option value="newspaper">Newspaper</option>
-                <option value="general">General</option>
-                <option value="references">References</option>
-            </select>
+                <label for="copyright_year"></label>
+                <input type="text" placeholder="Copyright Year" name="copyright_year" required>
+                <br>
 
-            <label for="status" style="font-size: 14px; color: white;">Status</label>
-            <select name="Status" id="Status" style="border-radius: 8px;">  
-                <option value="new">New</option>
-                <option value="archive">Archive</option>
-                <option value="damaged">Damaged</option>
-                <option value="lost">Lost</option>
-                <option value="old">Old</option>
-            </select>
+                <label for="category" style="font-size: 14px; color: white;">Category</label>
+                <select name="category_id" id="category_id" style="border-radius: 8px;">
+                    <option value=""></option>
+                    <option value="1">Periodical</option>
+                    <option value="2">English</option>
+                    <option value="3">Math</option>
+                    <option value="4">Science</option>
+                    <option value="5">Encyclopedia</option>
+                    <option value="6">Filipiniana</option>
+                    <option value="7">Newspaper</option>
+                    <option value="8">General</option>
+                    <option value="9">References</option>
+                </select>
 
-            <br> <br>
+                <label for="status" style="font-size: 14px; color: white;">Status</label>
+                <select name="status" id="status" style="border-radius: 8px;">
+                    <option value=""></option>
+                    <option value="New">New</option>
+                    <option value="Archive">Archive</option>
+                    <option value="Damaged">Damaged</option>
+                    <option value="Lost">Lost</option>
+                    <option value="Old">Old</option>
+                </select>
 
-            <center>
-                <div class="clearfix">
-                    <button type="submit" class="button-hover col-1">Search</button>
-                    <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
-                </div>
-            </center>
-          </div>
+                <br> <br>
+
+                <center>
+                    <div class="clearfix">
+                        <button type="submit" class="button-hover col-1">Search</button>
+                        <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    </div>
+                </center>
+            </div>
         </form>
-      </div>
+    </div>
 </body>
+
 </html>

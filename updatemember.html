@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="library.css">
+<script>
+    function Home() {
+        location.href = "homepageadmin.html";
+    }
+</script>
+
 <body>
     <br> <br> <br> <br> <br>
     <div id="modal3">
-        <form class="modal3-content">
-          <div class="container">
-            <center> <h2 style="color: white;">Update Member</h2> </center>
+        <form class="modal3-content" action="UpdateMember.php" method="get">
+            <div class="container">
+                <center>
+                    <h2 style="color: white;">Update Member</h2>
+                </center>
 
-            <label for="firstName"></label>
-            <input type="text" placeholder="First Name" name="firstName">
-            <br>
+                <label for="Member ID"></label>
+                <input type="text" placeholder="Member ID" name="member_id">
+                <br>
 
-            <label for="lastName"></label>
-            <input type="text" placeholder="Last Name" name="lastName">
-            <br>
+                <label for="firstName"></label>
+                <input type="text" placeholder="First Name" name="firstname">
+                <br>
 
-			<label for="address"></label>
-            <input type="text" placeholder="Address" name="address">
-            <br>
-			
-			<label for="contact"></label>
-            <input type="text" placeholder="Contact" name="contact">
-            <br>
-			
-			<label for="type" style="font-size: 14px; color: white;">Type</label>
-            <select name="Type" id="Type" style="border-radius: 8px;">  
-                <option value="teacher">Teacher</option>
-                <option value="student">Student</option>
-            </select>
-            <br>
-            <br><label for="status" style="font-size: 14px; color: white;">Status</label>
-            <select name="Status" id="status" style="border-radius: 8px;">  
-                <option value="active">Active</option>
-				<option value="inactive">Inactive</option>
-                <option value="banned">Banned</option>
-            </select>
-            <br>
-            <br>
-			
-			<label for="gender" style="font-size: 14px; color: white;">Gender</label>
-            <select name="Gender" id="Gender" style="border-radius: 8px;">  
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <br>
-            <br>
+                <label for="lastName"></label>
+                <input type="text" placeholder="Last Name" name="lastname">
+                <br>
 
-            <label for="gender" style="font-size: 14px; color: white;">Gender</label>
-            <select name="Gender" id="Gender" style="border-radius: 8px;">  
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <br>
-            <br>
+                <label for="address"></label>
+                <input type="text" placeholder="Address" name="address">
+                <br>
 
-            <label for="type" style="font-size: 14px; color: white;">Year Level</label>
-            <select name="year level" id="Type" style="border-radius: 8px;">  
-                <option value="faculty">Faculty</option>
-                <option value="first year">First Year</option>
-                <option value="second year">Second Year</option>
-                <option value="third year">Third Year</option>
-                <option value="fourth year">Fourth Year</option>
-            </select>
-            <br>
-            <br>
+                <label for="contact"></label>
+                <input type="text" placeholder="Contact" name="contact">
+                <br>
 
-            <center>
-                <div class="clearfix">
-                    <button type="submit" class="button-hover col-1">Search</button>
-                    <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
-                </div>
-            </center>
-          </div>
+                <label for="type" style="font-size: 14px; color: white;">Type</label>
+                <select name="type" id="Type" style="border-radius: 8px;">
+                    <option value=""></option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Student">Student</option>
+                </select>
+                <br>
+                <br><label for="status" style="font-size: 14px; color: white;">Status</label>
+                <select name="status" id="status" style="border-radius: 8px;">
+                    <option value=""></option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                    <option value="Banned">Banned</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="gender" style="font-size: 14px; color: white;">Gender</label>
+                <select name="gender" id="Gender" style="border-radius: 8px;">
+                    <option value=""></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="type" style="font-size: 14px; color: white;">Year Level</label>
+                <select name="year_level" id="Type" style="border-radius: 8px;">
+                    <option value=""></option>
+                    <option value="Faculty">Faculty</option>
+                    <option value="First Year">First Year</option>
+                    <option value="Second Year">Second Year</option>
+                    <option value="Third Year">Third Year</option>
+                    <option value="Fourth Year">Fourth Year</option>
+                </select>
+                <br>
+                <br>
+
+                <center>
+                    <div class="clearfix">
+                        <button type="submit" class="button-hover col-1">Update</button>
+                        <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    </div>
+                </center>
+            </div>
         </form>
-      </div>
+    </div>
 </body>
+
 </html>
