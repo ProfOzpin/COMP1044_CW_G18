@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +5,16 @@
 
 		$run = true;
 
-		$fields = array('borrow_details_id', 'borrow_status');
+		$fields = array('borrow_id','borrow_status');
+        $fieldnames = array("Borrow ID", "Borrow Status");
+        $i = 0;
 
 		foreach($fields as $field){
-			if($_GET[$field] == "" or $_GET[$field] == "" or $_GET[$field] == null){
+			if($_GET[$field] == "" or $_GET[$field] == " " or $_GET[$field] == null){
 				$run = false;
-				echo "Error: " . $field . " field is empty. Please try again \n";
+				echo "Error: " . $fieldnames[$i] . " field is empty. Please try again \n";
 			}
+            $i++;
 
 		}
 
@@ -29,14 +30,21 @@
 				die("Connection failed: " . $conn->connect_error);
 			}
 
-			$date = date("d/m/Y H:i");
-			
+            $val = array();
+            foreach($fields as $field){
+                array_push($val, $_GET[$field]);
+            }
+  
+            $val[0] = (int) $val[0];
+			$send = "UPDATE borrowdetails SET borrow_status = '$val[1]' WHERE borrow_id = $val[0]";
+            $result = $conn->query($send);
 
-			$send = $conn->prepare("INSERT INTO book(book_title, category_id, author, book_copies, book_pub, publisher_name, isbn, copyright_year, date_added, status) VALUES (?,?,?,?,?,?,?,?,?,?)");
-			$send->bind_param("sisisssiss", $_GET['book_title'], $_GET['category_id'], $_GET['author'], $_GET['book_copies'], $_GET['book_pub'], $_GET['publisher_name'], $_GET['isbn'], $_GET['copyright_year'], $date, $_GET['status']);
-			$send->execute();
-
-			echo "Added Item";
+            if ($conn->query($send) === TRUE) {
+                echo "Borrow Record updated successfully";
+            } else {
+                echo "Error updating member: " . $conn->error;
+            }
+                
 
 			$conn->close();
 		}

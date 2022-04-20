@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="library.css">
+<script>
+    function Home() {
+        location.href = "homepageadmin.html";
+    }
+</script>
+
+<body>
+    <br> <br> <br> <br> <br>
+    <div id="modal3">
+        <form class="modal3-content" action="UpdateBorrowingDetails.php" method="get">
+            <div class="container">
+                <center>
+                    <h2 style="color: white;">Update Borrowing Details</h2>
+                </center>
+
+                <label for="borrow_id"></label>
+                <input type="text" placeholder="Borrow ID" name="borrow_id">
+                <br>
+
+                <label for="borrow_status" style="font-size: 14px; color: white;">Borrow Status</label>
+                <select name="borrow_status" id="Type" style="border-radius: 8px;">
+                    <option value=""></option>
+                    <option value="pending">Pending</option>
+                    <option value="returned">Returned</option>
+                </select>
+                <br>
+
+                <center>
+                    <div class="clearfix">
+                        <button type="submit" class="button-hover col-1">Update</button>
+                        <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    </div>
+                </center>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

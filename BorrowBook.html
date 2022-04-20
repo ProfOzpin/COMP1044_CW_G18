@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="library.css">
+    <script>
+        function Home() {
+            location.href = "homepageuser.html";
+        }
+        function New_Borrow() {
+            var original_form = document.getElementById("Borrow Details Decision");
+            original_form.style.display = "none";
+            var new_form = document.getElementById("New Borrowing");
+            new_form.style.display = "block";
+        }
+        function Return_Book() {
+            var original_form = document.getElementById("Borrow Details Decision");
+            original_form.style.display = "none";
+            var new_form = document.getElementById("Return Book");
+            new_form.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <br> <br> <br> <br> <br>
+    <div id="Borrow Details Decision">
+        <form class="modal3-content">
+            <div class="container">
+                <center>
+                    <h2 style="color: white;">Borrowing Details</h2>
+                </center>
+                <!-- I will be making the form so that it updates the borrow status, book id and the return date,
+			lmk if need it to update borrow date as well (it is in a different table - borrow) -->
+
+                <!-- I'm doing it so that can select the borrow details it wants to update by the borrow details id
+			from a drop down menu connected to the DB -->
+                <center>
+                    <div class="clearfix">
+                        <button type="button" onclick="New_Borrow()" class="button-hover col-1">New Booking</button>
+                        <button type="button" onclick="Return_Book()" class="button-hover col-1">Return Book</button>
+                        <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    </div>
+                </center>
+            </div>
+        </form>
+    </div>
+    <div id="New Borrowing" style="display: none">
+        <form class="modal3-content" action="BorrowBook.php" method="get">
+            <div class="container">
+                <center>
+                    <h2 style="color: white;">Update Borrow Details</h2>
+                </center>
+                <!-- I will be making the form so that it updates the borrow status, book id and the return date,
+			lmk if need it to update borrow date as well (it is in a different table - borrow) -->
+
+                <!-- I'm doing it so that can select the borrow details it wants to update by the borrow details id
+			from a drop down menu connected to the DB -->
+
+                <label for="Book ID"></label>
+                <input type="text" placeholder="Book ID" name="book_id" required>
+                <br>
+
+                <label for="Member ID"></label>
+                <input type="text" placeholder="Member ID" name="member_id" required>
+                <br>
+
+                <label for="Due Date" style="font-size: 14px; color: white;">Date for Return</label>
+                <input type="date" placeholder="" name="due_date" required>
+                <br>
+
+                <center>
+                    <div class="clearfix">
+                        <button type="submit" class="button-hover col-1">Borrow</button>
+                        <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    </div>
+                </center>
+            </div>
+        </form>
+    </div>
+    <div id="Return Book" style="display: none">
+        <form class="modal3-content" action="ReturnBook.php" method="get">
+            <div class="container">
+                <center>
+                    <h2 style="color: white;">Update Borrow Details</h2>
+                </center>
+                <!-- I will be making the form so that it updates the borrow status, book id and the return date,
+			lmk if need it to update borrow date as well (it is in a different table - borrow) -->
+
+                <!-- I'm doing it so that can select the borrow details it wants to update by the borrow details id
+			from a drop down menu connected to the DB -->
+
+                <label for="Borrow ID"></label>
+                <input type="text" placeholder="Borrow ID" name="borrow_id" required>
+                <br>
+
+                <center>
+                    <div class="clearfix">
+                        <button type="submit" class="button-hover col-1">Borrow</button>
+                        <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
+                    </div>
+                </center>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
