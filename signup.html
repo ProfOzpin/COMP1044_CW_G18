@@ -5,7 +5,7 @@
     <script>
         function Home()
         {
-            location.href = "library.html";
+            location.href = "index.html";
         }
 
         function Login()
@@ -17,7 +17,7 @@
 <body>
     <br>
     <div id="modal1">
-        <form class="modal1-content" action="/action_page.php">
+        <form class="modal1-content" action="insert.php" method='post'>
           <div class="container">
             <center> <h2 style="color: black;">Sign Up</h2> </center>
             <hr>
@@ -42,7 +42,7 @@
             <br> <br>
             <center>
                 <div class="clearfix">
-                    <button type="submit" class="button-hover col-1">Sign Up</button>
+                    <input type="submit" class="button-hover col-1" value="Submit"></button>
                     <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
                 </div>
             </center>
