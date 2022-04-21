@@ -1,9 +1,14 @@
-
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<?php
+	<link rel="stylesheet" href="library.css">
+</head>
+
+<body>
+<br><br><br><br><br><br><br><br><br>
+	<center>
+		<?php
 
 		$run = true;
 
@@ -56,15 +61,15 @@
                     array_push($member_ids, $row['member_id']);
                 }
             } else {
-                echo "0 results";
+                echo "<h2 style=\"color:green;\">0 results</h>";
             }
 
 			foreach($member_ids as $member_id){
 				$send = "DELETE FROM borrow WHERE member_id = " . $member_id;
 				if ($conn->query($send) === TRUE) {
-					echo "Borrow deleted successfully";
+					echo "<h2 style=\"color:green;\">Borrow deleted successfully!</h2>";
 				} else {
-					echo "Error deleting book: " . $conn->error;
+					echo "<h2 style=\"color:red;\">Error deleting member: " . $conn->error . "</h2>";
 				}
 			}
 			
@@ -86,14 +91,16 @@
 				}		
 			}
 			if ($conn->query($send) === TRUE) {
-				echo "Book deleted successfully";
+				echo "<h2 style=\"color:green;\">Member deleted successfully!</h2>";
 				} else {
-				echo "Error deleting book: " . $conn->error;
+				echo "<h2 style=\"color:red;\">Error deleting member: " . $conn->error . "</h2>";
 				}
 				
 
 			$conn->close();
 		}
-	?>
-</head>
+		?>
+	</center>	
+</body>
+
 </html>

@@ -1,9 +1,14 @@
-
-
 <!DOCTYPE html>
 <html>
+
 <head>
-	<?php
+	<link rel="stylesheet" href="library.css">
+</head>
+
+<body>
+<br><br><br><br><br><br><br><br><br>
+	<center>
+		<?php
 
 		$run = true;
 
@@ -12,7 +17,7 @@
 		foreach($fields as $field){
 			if($_GET[$field] == "" or $_GET[$field] == "" or $_GET[$field] == null){
 				$run = false;
-				echo "Error: " . $field . " field is empty. Please try again \n";
+				echo "<h2 style=\"color:red;\">Error: " . $field . " field is empty. Please try again \n</h2>";
 			}
 
 		}
@@ -36,10 +41,12 @@
 			$send->bind_param("sisisssiss", $_GET['book_title'], $_GET['category_id'], $_GET['author'], $_GET['book_copies'], $_GET['book_pub'], $_GET['publisher_name'], $_GET['isbn'], $_GET['copyright_year'], $date, $_GET['status']);
 			$send->execute();
 
-			echo "Added Item";
+			echo "<h2 style=\"color:green;\">Book has been added successfully!</h2>";
 
 			$conn->close();
 		}
 	?>
-</head>
+	</center>
+</body>
+
 </html>
