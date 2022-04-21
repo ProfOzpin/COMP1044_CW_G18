@@ -2,10 +2,17 @@
 <html>
 
 <head>
-	<title>Insert</title>
+    <link rel="stylesheet" href="library.css">
+    <script>
+        function Login()
+        {
+            location.href = "login.html";
+        }
+    </script>
 </head>
 
 <body>
+<br><br><br><br><br><br><br><br><br>
 	<center>
 		<?php
 
@@ -35,7 +42,7 @@
 
         if ($conn->query($sql) === TRUE) 
         {
-        echo "New record created successfully";
+        echo "<h2 style=\"color:green;\">Account created successfully!</h2>";
         } 
         else 
         {
@@ -46,6 +53,12 @@
 		$conn->close();
 		?>
 	</center>
+    <br> <br> <br> <br> <br>
+    <center>
+    
+        <button class="button-hover col-3" onclick="Login()"> Login </button>
+    
+    </center>
 </body>
 
 </html>
