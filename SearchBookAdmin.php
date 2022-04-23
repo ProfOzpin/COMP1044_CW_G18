@@ -3,17 +3,30 @@
 
 <head>
 	<link rel="stylesheet" href="library.css">
-	<script>
-    function Return()
-    {
-        location.href = "homepageadmin.html";
-    }
-	</script>
 </head>
 
 <body>
-<br><br><br><br><br><br><br><br><br>
+	<br>
+	<center><h2 style="color:gold;">Search Results</h2></center>
+<br><br>
 	<center>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Book ID</th>
+				<th>Title</th>
+				<th>Category ID</th>
+				<th>Author</th>
+				<th>Copies</th>
+				<th>Book Pub</th>
+				<th>Publisher Name</th>
+				<th>ISBN</th>
+				<th>Copyright Year</th>
+				<th>Date Added</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+	
 		<?php
 
 			$run = true;
@@ -49,7 +62,7 @@
 					$send.= " WHERE ";
 					foreach($fields as $field){
 						
-						if(!in_array($field, $empty_fields) and $field != "member_type"){
+						if(!in_array($field, $empty_fields)){
 							if($current_index > 0){
 								$send .= " AND ";
 							}
@@ -66,19 +79,35 @@
 				if ($result->num_rows > 0) {
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
-						echo "<h2 style=\"color:green;\">Book ID: " . $row["book_id"]. " - Title: " . $row["book_title"]. " - Author: " . $row["author"] . " - Category: " . $categories[((int) $row["category_id"]) - 1] . " - Publishing Company: " . $row['book_pub'] . " - Publisher's name: " . $row['publisher_name'] . " - ISBN: " . $row['isbn'] . " - Copyright Year: " . $row['copyright_year'] . " - Date Added: " . $row['date_added'] . "<br></h2>";
+		?>
+					<tr>
+						<td> <?php echo $row["book_id"];?> </td>
+						<td> <?php echo $row["book_title"];?> </td>
+						<td> <?php echo $row["category_id"];?> </td>
+						<td> <?php echo $row["author"];?> </td>
+						<td> <?php echo $row["book_copies"];?> </td>
+						<td> <?php echo $row["book_pub"];?> </td>
+						<td> <?php echo $row["publisher_name"];?> </td>
+						<td> <?php echo $row["isbn"];?> </td>
+						<td> <?php echo $row["copyright_year"];?> </td>
+						<td> <?php echo $row["date_added"];?> </td>
+						<td> <?php echo $row["status"];?> </td>
+					</tr>
+		<?php				
 					}
 				} else {
-					echo "<h2 style=\"color:green;\">0 results</h2>";
+					echo "<h2 style=\"color:red;\">0 results</h2>";
 				}
 					
 
 				$conn->close();
 			}
 		?>
-	<br> <br> <br>
-    <button class="button-hover col-3" onclick="Return()"> Go Back </button>
-    </center>
+	</table>
+	<br> <br>
+	<button class="button-hover col-3" onclick="location.href='searchbookAdmin.html'"> Back </button>
+	<br> <br>
+	</center>
 </body>
 
 </html>

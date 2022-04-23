@@ -6,8 +6,25 @@
 </head>
 
 <body>
-<br><br><br><br><br><br><br><br><br>
+<br>
+<center><h2 style="color:gold;">Search Results</h2></center>
+<br><br>
 	<center>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Member ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Gender</th>
+				<th>Address</th>
+				<th>Contact</th>
+				<th>Type</th>
+				<th>Year Level</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+	
 		<?php
 
 			$run = true;
@@ -60,16 +77,32 @@
 				if ($result->num_rows > 0) {
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
-						echo "<h2 style=\"color:green;\">Member ID: " . $row["member_id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. " - Gender: " . $row["gender"] . " - Address: " . $row['address'] . " - Membership Type: " . $row['type'] . " - Year Level: " . $row['year_level'] . " - Status: " . $row['status'] . "<br></h2>";
+		?>
+					<tr>
+						<td> <?php echo $row["member_id"];?> </td>
+						<td> <?php echo $row["firstname"];?> </td>
+						<td> <?php echo $row["lastname"];?> </td>
+						<td> <?php echo $row["gender"];?> </td>
+						<td> <?php echo $row["address"];?> </td>
+						<td> <?php echo $row["contact"];?> </td>
+						<td> <?php echo $row["type"];?> </td>
+						<td> <?php echo $row["year_level"];?> </td>
+						<td> <?php echo $row["status"];?> </td>
+					</tr>
+		<?php
 					}
 				} else {
-					echo "<h2 style=\"color:green;\">0 results</h2>";
+					echo "<h2 style=\"color:red;\">0 results</h2>";
 				}
 					
 
 				$conn->close();
 			}
 		?>
+		</table>
+	<br> <br>
+	<button class="button-hover col-3" onclick="location.href='searchmember.html'"> Back </button>
+	<br> <br>
 	</center>
 </body>
 

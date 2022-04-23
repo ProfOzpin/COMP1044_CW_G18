@@ -47,6 +47,12 @@
 		}
 	?>
 	</center>
+	<br> <br> <br> <br> <br>
+    <center>
+    
+        <button class="button-hover col-3" onclick="location.href='addbook.html'"> Back </button>
+    
+    </center>
 </body>
 
 </html>

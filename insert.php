@@ -28,7 +28,6 @@
             }
             
 		
-		// Taking all 5 values from the form data(input)
 		$first_name = $_REQUEST['firstName'];
 		$last_name = $_REQUEST['lastName'];
 		$username = $_REQUEST['username'];
@@ -36,7 +35,6 @@
 		
 		
 		// Performing insert query execution
-		// here our table name is college
 		$sql = "INSERT INTO users VALUES ('','$username',
 			'$password','$first_name','$last_name')";
 

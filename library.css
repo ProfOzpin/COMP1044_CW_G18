@@ -250,3 +250,28 @@ hr {
 .or {
     color: white;
 }
+
+.table {
+
+    color: black;
+    min-width: 400px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.492);
+    backdrop-filter: blur(8px) saturate(180%);
+    table-layout: fixed;
+    
+    
+}
+
+.table thead tr {
+    background-color: #480096;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table tr {
+    width: 9.09% ;
+    text-align: center;
+}

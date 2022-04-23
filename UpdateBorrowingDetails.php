@@ -46,7 +46,7 @@
 				$result = $conn->query($send);
 
 				if ($conn->query($send) === TRUE) {
-					echo "<h2 style=\"color:green;\">Borrow Record updated successfully</h2>";
+					echo "<h2 style=\"color:green;\">Borrow record updated successfully</h2>";
 				} else {
 					echo "<h2 style=\"color:red;\">Error updating borrow details: " . $conn->error . "</h2>";
 				}
@@ -55,6 +55,7 @@
 				$conn->close();
 			}
 		?>
+		<br> <button class="button-hover col-3" onclick="location.href='updateborrowingdetails.html'"> Back </button> <br>
 	</center>
 </body
 

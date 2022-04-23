@@ -100,7 +100,13 @@
 			$conn->close();
 		}
 		?>
-	</center>	
+	</center>
+	<br> <br> <br> <br> <br>
+    <center>
+    
+        <button class="button-hover col-3" onclick="location.href='deletebook.html'"> Back </button>
+    
+    </center>	
 </body>
 
 </html>

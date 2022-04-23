@@ -53,6 +53,7 @@
 				$conn->close();
 			}
 		?>
+		<br> <br> <button class="button-hover col-3" onclick="location.href='BorrowBook.html'"> Back </button>
 	</center>
 </body>
 
