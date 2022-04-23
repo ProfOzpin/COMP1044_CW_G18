@@ -1,7 +1,7 @@
-# ** Group 18 Presents COMP1044 Coursework 2 **
-##  ** Done by, Ahmad Hazem Abdelsalam, Maram B. R. Seyam, Cassandra Hong Yen Kei, Abdullah Marghoobul Haque, Youssef Mohamed Abdelhamid Mohamed
+# Group 18 Presents COMP1044 Coursework 2
+##  Done by, Ahmad Hazem Abdelsalam, Maram B. R. Seyam, Cassandra Hong Yen Kei, Abdullah Marghoobul Haque, Youssef Mohamed Abdelhamid Mohamed
 
-# **  COMP1044 Coursework 2 **
+# COMP1044 Coursework 2
 
 **COMP1044 Coursework 2** is a Library website featuring a mixture of HTML, CSS, Javascript, and PHP files.
 The Library is an expansive collection of books, with multiple users already signed up.
@@ -14,7 +14,7 @@ The website is currently being hosted externally via replit.com, and remotemysql
 
 For info on accessing the remotemysql server, please view the report attached in the submission.
 
-** Utilities Used **
+**Utilities Used**
 
 Our website featured the usage of multiple utilies such as:
 
