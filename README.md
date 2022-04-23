@@ -14,6 +14,8 @@ The website is currently being hosted externally via replit.com, and remotemysql
 
 For info on accessing the remotemysql server, please view the report attached in the submission.
 
+
+
 **Utilities Used**
 
 Our website featured the usage of multiple utilies such as:
@@ -42,7 +44,7 @@ Via homepageadmin.html, you have access to various commands such as Adding Books
 If you signed in as a User, you will have access to the User homepage, homepageuser.html.
 The homepage will allow you to search through the books available in the library, and even lets you borrow and return them!
 
-** Functionality **
+**Functionality**
 
 All functions consist of either php or html forms, *or both*, in order to output the desired result.
 Our website additionally features modern features like dynamic queries, where on several functions, your query can utilise on a few number of values from the corresponding form.
