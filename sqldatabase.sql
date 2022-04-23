@@ -83,9 +83,9 @@ CREATE TABLE `borrow` (
 --
 
 INSERT INTO `borrow` (`borrow_id`, `member_id`, `date_borrow`, `due_date`) VALUES
-(482, 52, '20/03/2014  23:50:27', '21/03/2014'),
-(483, 55, '20/03/2014  23:49:34', '21/03/2014'),
-(484, 55, '20/03/2014  23:38:22', '03/01/2014');
+(482, 52, '2014-03-20 23:50:27', '2014-03-21'),
+(483, 55, '2014-03-20  23:49:34', '2014-03-21'),
+(484, 55, '2014-03-20  23:38:22', '2014-01-03');
 
 -- --------------------------------------------------------
 
@@ -299,7 +299,7 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
