@@ -3,30 +3,41 @@
 
 <head>
 	<link rel="stylesheet" href="library.css">
+	<script>
+    function Return()
+    {
+        location.href = "homepageadmin.html";
+    }
+	</script>
 </head>
 
 <body>
 <br><br><br><br><br><br><br><br><br>
 	<center>
-		<?php
+	<?php
 
 		$run = true;
 
-		$fields = array('firstname', 'lastname', 'gender', 'address', 'contact', 'type', 'year_level', 'status');
+		$fields = array('firstname', 'lastname', 'gender', 'address', 'contact', 'year_level', 'status');
 
 		foreach($fields as $field){
 			if($_GET[$field] == "" or $_GET[$field] == "" or $_GET[$field] == null){
 				$run = false;
-				echo "<h2 style=\"color:red;\">Error: " . $field . " field is empty. Please try again \n</h2>";
+				echo "Error: " . $field . " field is empty. Please try again \n";
 			}
 
 		}
 
+		if($_GET['year_level'] == "Faculty"){
+			$type = "Teacher";
+		} else {
+			$type = "Student";
+		}
 		if($run == true){
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$dbname = "sqldatabase";
+			$servername = "remotemysql.com";
+			$username = "aJ61sgaQ7x";
+			$password = "ZbKbPfvFYZ";
+			$dbname = "aJ61sgaQ7x";
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
 			// Check connection
@@ -35,16 +46,18 @@
 			}
 			
 			$send = $conn->prepare("INSERT INTO member(firstname, lastname, gender, address, contact, type, year_level, status) VALUES (?,?,?,?,?,?,?,?)");
-			$send->bind_param("ssssssss", $_GET['firstname'], $_GET['lastname'], $_GET['gender'], $_GET['address'], $_GET['contact'], $_GET['type'], $_GET['year_level'], $_GET['status']);
+			$send->bind_param("ssssssss", $_GET['firstname'], $_GET['lastname'], $_GET['gender'], $_GET['address'], $_GET['contact'], $type, $_GET['year_level'], $_GET['status']);
 			$send->execute();
 
-			echo "<h2 style=\"color:green;\">Member has been added successfully!</h2>";
+			echo "Added Item";
 
 			$conn->close();
 		}
 		
 	?>
-	</center>
+	<br> <br> <br>
+    <button class="button-hover col-3" onclick="Return()"> Go Back </button>
+    </center>
 </body>
 
 </html>
