@@ -3,12 +3,17 @@
 
 <head>
 	<link rel="stylesheet" href="library.css">
+	<script>
+    function Return()
+    {
+        location.href = "homepageadmin.html";
+    }
+	</script>
 </head>
-
 <body>
 <br><br><br><br><br><br><br><br><br>
 	<center>
-		<?php
+	<?php
 
 		$run = true;
 
@@ -25,10 +30,10 @@
 		}
 
 		if($run == true){
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$dbname = "sqldatabase";
+			$servername = "remotemysql.com";
+			$username = "aJ61sgaQ7x";
+			$password = "ZbKbPfvFYZ";
+			$dbname = "aJ61sgaQ7x";
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
 			// Check connection
@@ -61,7 +66,7 @@
                     array_push($member_ids, $row['member_id']);
                 }
             } else {
-                echo "<h2 style=\"color:green;\">0 results</h>";
+                echo "0 results";
             }
 
 			foreach($member_ids as $member_id){
@@ -99,14 +104,10 @@
 
 			$conn->close();
 		}
-		?>
-	</center>
-	<br> <br> <br> <br> <br>
-    <center>
-    
-        <button class="button-hover col-3" onclick="location.href='deletebook.html'"> Back </button>
-    
-    </center>	
+	?>
+	<br> <br> <br>
+    <button class="button-hover col-3" onclick="Return()"> Go Back </button>
+    </center>
 </body>
 
 </html>

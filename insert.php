@@ -16,10 +16,10 @@
 	<center>
 		<?php
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "sqldatabase";
+        $servername = "remotemysql.com";
+        $username = "aJ61sgaQ7x";
+        $password = "ZbKbPfvFYZ";
+        $dbname = "aJ61sgaQ7x";
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		
 		// Check connection
@@ -28,6 +28,7 @@
             }
             
 		
+		// Taking all 5 values from the form data(input)
 		$first_name = $_REQUEST['firstName'];
 		$last_name = $_REQUEST['lastName'];
 		$username = $_REQUEST['username'];
@@ -35,8 +36,9 @@
 		
 		
 		// Performing insert query execution
-		$sql = "INSERT INTO users VALUES ('','$username',
-			'$password','$first_name','$last_name')";
+		// here our table name is college
+		$sql = "INSERT INTO users (username,
+			password, firstname, lastname) VALUES ('$username', '$password', '$first_name', '$last_name')";
 
         if ($conn->query($sql) === TRUE) 
         {
@@ -44,7 +46,7 @@
         } 
         else 
         {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "<h2>Error: " . $sql . "<br>" . $conn->error . "</h2>";
         }
     
 		// Close connection

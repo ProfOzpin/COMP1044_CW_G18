@@ -4,19 +4,9 @@
 <head>
     <link rel="stylesheet" href="library.css">
     <script>
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-
-        if (urlParams.get("blank") != null) {
-            alert("Error! " + urlParams.get("blank") + " field is empty!")
-        }
 
         function Home() {
-            const type_val = urlParams.get('type');
-            if (type_val == "user")
-                location.href = "homepageuser.html";
-            else
-                location.href = "homepageadmin.html";
+            location.href = "homepageadmin.html";
         }
     </script>
 </head>
@@ -29,7 +19,7 @@
                 <center>
                     <h2 style="color: white;">Search Member</h2>
                     <h4 style="color: gold;">Leave the fields blank to search for all books in the database or fill the
-                        required ones to add search filters</h4>
+                        required ones to add search parameters</h4>
                 </center>
 
                 <label for="firstName"></label>

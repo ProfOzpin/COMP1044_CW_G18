@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="stylesheet" href="library.css">
 	<script>
     function Return()
     {
-        location.href = "updatemember.php";
+        location.href = "UpdateMember.php";
     }
 	</script>
 </head>
+
 <body>
-    <center>
-        <br> <br> <br> <br> <br> <br> <br> <br> <br>
+<br><br><br><br><br><br><br><br><br>
+	<center>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sqldatabase";
+$servername = "remotemysql.com";
+$username = "aJ61sgaQ7x";
+$password = "ZbKbPfvFYZ";
+$dbname = "aJ61sgaQ7x";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if($_POST['year_level'] == "Faculty"){
@@ -29,12 +31,14 @@ $sql = "UPDATE member SET firstname='$_POST[firstName]', lastname='$_POST[lastNa
 if ($conn->query($sql) === TRUE) {
     echo "<h2 style=\"color:green;\">Record(s) updated successfully!</h2>";
     } else {
-    echo "Error updating record: " . $conn->error;
+    echo "<h2 style=\"color:red;\">Error updating record: " . $conn->error . "</h2>";
     }
     $conn->close();
 ?>
-    
-<button type="button" onclick="location.href='UpdateMember.php'" class="button-hover col-3">Back</button>
-<br> <br>
-</center>
+	<br> <br> <br>
+    <button class="button-hover col-3" onclick="Return()">Back </button>
+    </center>
 </body>
+
+</html>
+

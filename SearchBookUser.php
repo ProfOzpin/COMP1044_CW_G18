@@ -45,10 +45,10 @@
 			}
 
 			if($run == true){
-				$servername = "localhost";
-				$username = "root";
-				$password = "";
-				$dbname = "sqldatabase";
+				$servername = "remotemysql.com";
+			$username = "aJ61sgaQ7x";
+			$password = "ZbKbPfvFYZ";
+			$dbname = "aJ61sgaQ7x";
 				// Create connection
 				$conn = new mysqli($servername, $username, $password, $dbname);
 				// Check connection

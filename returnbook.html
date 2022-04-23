@@ -12,17 +12,17 @@
 <body>
     <br> <br> <br> <br> <br>
     <div id="modal3">
-        <form class="modal3-content">
+        <form class="modal3-content" action="ReturnBook.php" method="get">
           <div class="container">
             <center> <h2 style="color: white;">Return Book</h2> </center>
 
-            <label for="title"></label>
-            <input type="text" placeholder="Book Title" name="title" required>
+            <label for="borrow_id"></label>
+            <input type="text" placeholder="Borrow ID" name="borrow_id" required>
             <br>
 
             <center>
                 <div class="clearfix">
-                    <button type="submit" class="button-hover col-1">Search</button>
+                    <button type="submit" class="button-hover col-1">Return</button>
                     <button type="button" onclick="Home()" class="button-hover col-2">Cancel</button>
                 </div>
             </center>
